@@ -1,0 +1,5 @@
+In this lecture, I'll be discussing the difference between value type and the reference
+types.This will teach you how we are dealing everything as "objects".It'll also teach you
+how we convert value types to reference types (boxing) to treat value types as an object.
+Similarly, a conversion from reference type to value type allows us to use reference types
+as a value type or a simple variable.

@@ -1,0 +1,66 @@
+using System;
+
+namespace Learning_CSharp
+{
+    public class A
+    {
+        public int a,b,c;
+        public A()
+        {
+            a = 1;
+            b = 2;
+            c = 3;
+        }
+        public A(int a_ , int b_ , int c_)
+        {
+            a = a_;
+            b = b_;
+            c = c_;
+        }
+        public void Print_A()
+        {
+            Console.WriteLine("a = {0}  b = {1}  c = {2}", a,b,c);
+        }
+    }
+
+    public class B:A
+    {
+        public int a,b,c; // a,b of parent class will be hidden if acessing any Child class functions.But 
+        public B()
+        {
+            a = 10;
+            b = 20;
+            c = 30;
+        }
+        public B(int a_ , int b_ , int c_) : base(a_, b_, c_) 
+        /*using base keyword we can call the ctor of parent class of our own choice.*/
+        {
+            a = a_ + 1;
+            b = b_ + 1;
+            c = c_ + 1;
+        }
+        public void Print_B()
+        {
+            Console.WriteLine("a = {0}  b = {1}  c = {2} ", a, b, c);
+        }
+    }
+
+    
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            A Parent;
+            B Child = new B();
+            Parent = Child;
+            Parent.Print_A(); // Through Parent reference you can not access child class methods or attributes
+            Child.Print_A(); /*  since calling the parent's method ,therefore only those attributes that are part of parent class 
+                                 will be printed */
+            Child.Print_B(); //  child class attributes will be printed.Same name attributes are overriden(No ambiguity).
+            B Child2 = new B(3, 2, 1);
+            Child2.Print_A();
+            Child2.Print_B();
+            
+        }
+    }
+}

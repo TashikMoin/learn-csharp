@@ -1,0 +1,25 @@
+using System;
+
+namespace Learning_CSharp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            // Value Types & Reference Types
+            int[] Arr1 = { 5, 2, 3, 10, 25 }; // Memory = Stack
+            int[] Arr2 = new int[100]; // Memory = Heap
+            string str1;
+            str1 = "LearnC-Sharp"; // Memory = Stack
+            string str2 = new string("Hello world"); // Memory = Heap
+            Array.Sort(Arr1);
+            foreach (int x in Arr1)
+            {
+                Console.WriteLine("{0}\n", x);
+            }
+            // Contains All String Functions With Description https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.8
+            // Contains All Array Functions With Description https://docs.microsoft.com/en-us/dotnet/api/system.array?view=netframework-4.8
+            // You can see any value type / reference type built-in library functions from .NET 4.8 documentation by Microsoft.
+        }
+    }
+}

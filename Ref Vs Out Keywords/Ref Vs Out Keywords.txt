@@ -1,0 +1,37 @@
+using System;
+namespace Learning_CSharp
+{
+    public class Program
+    {
+        // Use Of Ref & Out Keywords
+        void Calculate_Using_Ref( int a , int b , ref int Sum_R , ref int Product_R , ref int Difference_R )
+        {
+            Sum_R = a + b;
+            Product_R = a * b;
+            Difference_R = a - b;
+         /*Using Ref, Even if we don't do any calculations then we will be getting the same values that we passed from main but 
+           we can not call these values as "function returning values" because they are the same values that we've passed from main method */
+        }
+
+        void Calculate_Using_Out(int a, int b, out int Sum_O, out int Product_O, out int Difference_O)
+        {
+            Sum_O = a + b;
+            Product_O = a * b;
+            Difference_O = a - b;
+         /*Using Out keyword it is now mandatory for these parameters to change their initial values inside this function*/
+        }
+        static void Main(string[] args)
+        {
+            int a = 10, b = 5;
+            int Sum_O = 0, Product_O = 0, Difference_O = 0;
+            int Sum_R = 0 , Product_R = 0  , Difference_R = 0; 
+            /* If not initialized then we could not pass these parameters to any function.Every variable must be initialized 
+            before it is used. */
+            Program Obj = new Program();
+            Obj.Calculate_Using_Ref(a, b,ref Sum_R, ref Product_R, ref Difference_R);
+            Obj.Calculate_Using_Out(a, b, out Sum_R, out Product_R, out Difference_R);
+            Console.WriteLine("Sum_R = {0} , Product_R = {1} , Difference_R = {2}\n", Sum_R, Product_R, Difference_R);
+            Console.WriteLine("Sum_O = {0} , Product_O = {1} , Difference_O = {2}", Sum_O, Product_O, Difference_O);
+        }
+    }
+}

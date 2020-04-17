@@ -1,0 +1,62 @@
+using System;
+
+namespace Learning_CSharp
+{
+    public class A
+    {
+        public int a,b,c;
+        public A()
+        {
+            a = 1;
+            b = 2;
+            c = 3;
+        }
+
+        void Print()
+        {
+            Console.WriteLine("()");
+        }
+        void Print(int a)
+        {
+            Console.WriteLine("(int a)");
+        }
+        string Print(string str , int a)
+        {
+            Console.WriteLine("(string str , int a)");
+            return str;
+        }
+        void Print(int a , string str)
+        {
+            Console.WriteLine("(int a , string str)");
+        }
+        /* int Print() // Can not overload because there already exist a function with this signature
+        {
+
+        }
+        */
+    }
+
+    
+    public class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Main(string[] args)");
+        }
+        /*Note : either no parameters for entry point main method or string[] args as parameter.Also return type
+                 can be either void or int */
+
+        public int Main()
+        {
+            Console.WriteLine("Main()");
+            return 0;
+        }
+        public string Main(int x)
+        {
+            return "String";
+        }
+
+
+    }
+}

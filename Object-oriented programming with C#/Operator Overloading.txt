@@ -1,0 +1,21 @@
+using System;
+
+namespace Test
+{
+    class A
+    {
+        public static int operator+(int a , A b) 
+        /* at least one of the parameter must have a user defined class type.Thus, it is not possible for a user-defined 
+           operator to have the same signature as a predefined operator. */
+        {
+            return a + b;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    }
+}

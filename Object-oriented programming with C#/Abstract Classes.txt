@@ -1,0 +1,29 @@
+using System;
+
+namespace Test
+{
+    abstract public class A
+    {
+        public abstract int fun(int x, int y);
+        public void xyz()
+        {
+            Console.WriteLine("Hello World");
+        }
+    }
+    public class B:A
+    {
+        public override int fun(int x, int y)
+        {
+            return x + y;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            B obj = new B();
+            obj.xyz();
+        }
+    }
+}

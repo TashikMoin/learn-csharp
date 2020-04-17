@@ -1,0 +1,29 @@
+using System;
+
+namespace Learning_CSharp
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            // Type Conversion
+            float f ;
+            int x = 5 ;
+            f = x;  // No Data Loss ( Allowed )
+
+            float ff = 5.25f; // the 'f' in the is just a suffix to make compiler to distinguish between float and double.
+            int y ;
+            // y = ff ;    Data Loss  Error Statement, Compiler Can Not Implicitly Convert It.
+
+
+            y = (int)ff ; // explicit type conversion
+            //OR
+            y = Convert.ToInt32(ff);
+
+            Console.WriteLine("f = {0}   y = {1}", f, y) ;
+            // List Of Conversion Methods With Description https://www.tutorialspoint.com/csharp/csharp_type_conversion.htm
+
+            // Note : For Reference-Reference Type Conversion We Need To Define Our Conversion Functions Explicitly
+        }
+    }
+}

@@ -1,0 +1,46 @@
+using System;
+
+namespace Test
+{
+    class A
+    {
+        public void abc()
+        {
+            Console.WriteLine("\nParent abc()\n");
+        }
+        public virtual void abc(int x)
+        {
+            Console.WriteLine("\nParent abc(int x)\n");
+        }
+
+    }
+    class B : A
+    {
+        public new void abc()
+        {
+            Console.WriteLine("\nChild abc()\n");
+        }
+        public override void abc(int x)
+        {
+            Console.WriteLine("\nChild abc(int x)\n");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A Obj11 = new A();
+            A Obj12 = new B();
+            B Obj21 = new B();
+            Obj11.abc(10);
+            Obj11.abc(); 
+            Obj12.abc(10); 
+            Obj12.abc(); 
+            Obj21.abc(10);
+            ((A)Obj21).abc(10);
+            Obj21.abc();
+            ((A)Obj21).abc();
+        }
+    }
+}

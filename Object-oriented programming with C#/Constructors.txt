@@ -1,0 +1,71 @@
+using System;
+
+namespace Learning_CSharp
+{
+    public class A
+    {
+        public static int x;
+        static A()
+        {
+            Console.WriteLine("Static Constructor Of Class A Is Called");
+        }
+        public A()
+        {
+            Console.WriteLine("Default Non-Static Constructor Of Class A Is Called");
+        }
+    }
+    public class Program
+    {
+        public int Num1;
+        public static int Num2; // Can also initialize any value here to static fields but not recommended.
+        public Program()
+        {
+            Num1 = 10;
+            Console.WriteLine("Default Non-Static Constructor Of Program Class Is Called");
+
+        }
+        static Program()
+        {
+            Num2 = 20;
+            Console.WriteLine("Static Constructor Of Program Class Is Called");
+        }
+        /* 
+                                                  Static Constructor
+
+           1. C# don't allow access modifiers with Static Constructors because it is implicitly called by the compiler 
+              only once to initialize the static fields. 
+           2. They are made without any parameters because we do not call static constructor and compiler can not pass arguments 
+              to static constructor.
+           3. If default non static default constructor exist too then it does not matter because static is called by the compiler
+              and non static constructor is called by the user
+           4. Static constructors are invoked only when the first instance(object) of a class is created OR if there exist a
+              main method inside a class then it is invoked before the executiong of the main method to initialize the static fields.
+
+
+        */
+
+
+
+        /*
+                                                  Non-Static Constructor
+
+           1. If any parameterized constructor is defined then it is mandatory for a programer to write the default constructor by
+              himself too, Otherwise we will not be allowed to make an instant without providing an argument.
+           2. Constructors do not have return any type when the constructor exits, the runtime returns the newly-created instance. 
+              So the reason the constructor doesn't return a value is because it's not called directly by your code, it's called by 
+              the memory allocation and object initialization code in the runtime.
+           3. Parent class constructor is called using "base" keyword.Similar to "Super" keyword in Java.
+           4. Child class constructor is called first but executed at the end.Parent class constructor is executed first.
+
+        */
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Main Started Execution");
+            Program Obj1 = new Program();
+            A Obj2 = new A();
+            A Obj3 = new A(); // Static is not called this time.It is called only when the first instance is created.
+            Console.WriteLine("Main Ended Execution");
+        }
+    }
+}

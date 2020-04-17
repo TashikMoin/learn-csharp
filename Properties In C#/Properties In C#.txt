@@ -1,0 +1,48 @@
+using System;
+
+namespace Learning_CSharp
+{
+    public class Program
+    {
+        private int _Height;
+        public int Height 
+        {
+            get 
+            { return _Height; } // remove get if want to give only write access
+
+            set                 // remove set if want to give only read  acess
+            {
+                if (value > 0) 
+                {
+                    _Height = value; 
+                    /* value is a keyword representing anything passed to the setter to assign any value.its data type is similar
+                       to property */
+                }
+                else
+                {
+                    // you can also generate any exception
+                }
+            }
+        }
+
+        Program()
+        {
+            _Height = 10;
+            Name = "Ali";
+        }
+
+        public string Name { get; set; } // auto implemented property , C# compiler will generate a private field implicitly .
+        /* Note : In auto-implemented property we are accessing the same private field but using the same property name.The
+           private is hidden in auto-implemented property*/
+
+        static void Main(string[] args)
+        {
+            Program Obj = new Program();
+            Console.WriteLine("Name = {0}  Height = {1}\n", Obj.Name, Obj.Height);
+            Obj.Height = -5;
+            Console.WriteLine("Name = {0}  Height = {1}\n", Obj.Name, Obj.Height);
+            Obj.Height = 15;
+            Console.WriteLine("Name = {0}  Height = {1}\n", Obj.Name, Obj.Height);
+        }
+    }
+}

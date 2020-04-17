@@ -1,0 +1,43 @@
+using System;
+
+namespace Test
+{
+    interface A
+    {
+        int sum(int x, int y); // by default every method is public in interfaces
+    }
+
+    public interface B
+    {
+        int product(int x, int y);
+    }
+    public class First:A,B
+    {
+        public int sum(int x, int y)
+        {
+            return x + y;
+        }
+        public int product(int x, int y)
+        {
+            return x * y;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            First Obj = new First();
+            A RefA = Obj;
+            B RefB = Obj;
+            Console.WriteLine("Sum = {0}", RefA.sum(5, 10));
+            /*Console.WriteLine("Sum = {0}", RefA.product(5, 10)); 
+              can't be called because calling through reference of Interface A
+              Similarly , Console.WriteLine("Sum = {0}", RefB.sum(5, 10)); */
+            Console.WriteLine("Sum = {0}", RefB.product(5, 10));
+            Console.WriteLine("Sum = {0}", Obj.sum(5, 10));
+            Console.WriteLine("Sum = {0}", Obj.sum(5, 10));
+
+        }
+    }
+}
