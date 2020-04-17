@@ -9,6 +9,7 @@ namespace Learning_CSharp
             // Value Types & Reference Types
             int[] Arr1 = { 5, 2, 3, 10, 25 }; // Memory = Stack
             int[] Arr2 = new int[100]; // Memory = Heap
+            // We can also resize this arrays by calling resize method. Array.Resize(ref myarray , size);
             string str1;
             str1 = "LearnC-Sharp"; // Memory = Stack
             string str2 = new string("Hello world"); // Memory = Heap
