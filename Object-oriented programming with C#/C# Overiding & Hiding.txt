@@ -8,7 +8,7 @@ namespace Test
         {
             Console.WriteLine("\nParent abc()\n");
         }
-        public virtual void abc(int x)
+        public virtual void abc(int x) // To override a method the method in parent class must be virtual.
         {
             Console.WriteLine("\nParent abc(int x)\n");
         }
@@ -16,11 +16,11 @@ namespace Test
     }
     class B : A
     {
-        public new void abc()
+        public new void abc() // use New keyword for method hiding.
         {
             Console.WriteLine("\nChild abc()\n");
         }
-        public override void abc(int x)
+        public override void abc(int x) // use override keyword to override any parent class method in child classes
         {
             Console.WriteLine("\nChild abc(int x)\n");
         }
