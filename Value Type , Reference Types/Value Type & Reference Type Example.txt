@@ -7,7 +7,7 @@ namespace Learning_CSharp
         static void Main(string[] args)
         {
             // Value Types & Reference Types
-            int[] Arr1 = { 5, 2, 3, 10, 25 }; // Memory = Stack
+            int[] Arr1 = { 5, 2, 3, 10, 25 }; // Memory = Heap because arryas are ref types
             int[] Arr2 = new int[100]; // Memory = Heap
             string str1;
             str1 = "LearnC-Sharp"; // Memory = Stack
