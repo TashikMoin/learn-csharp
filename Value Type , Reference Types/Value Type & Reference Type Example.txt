@@ -10,7 +10,7 @@ namespace Learning_CSharp
             int[] Arr1 = { 5, 2, 3, 10, 25 }; // Memory = Heap because arryas are ref types
             int[] Arr2 = new int[100]; // Memory = Heap
             string str1;
-            str1 = "LearnC-Sharp"; // Memory = Stack
+            str1 = "LearnC-Sharp"; // Memory = Heap because strings are also ref types
             string str2 = new string("Hello world"); // Memory = Heap
             Array.Sort(Arr1);
             foreach (int x in Arr1)
