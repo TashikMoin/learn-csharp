@@ -54,6 +54,7 @@ namespace Delegates
                method will be returned because it will override all the previous returned values of other methods. Similarly,
                the out parameters are also overriden when we call delegates of same return types or same out parameters.
                reference: https://docs.microsoft.com/en-us/dotnet/csharp/delegates-strongly-typed
+               reference: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/using-delegates
             */
             Console.WriteLine();
             Caller = Caller - Obj.Add;
