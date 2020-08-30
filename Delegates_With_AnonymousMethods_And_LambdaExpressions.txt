@@ -1,0 +1,66 @@
+using System;
+
+namespace Delegates_With_AnonymousMethods_And_LambdaExpressions
+{
+    public delegate double Ref(int first, int second);
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Program Obj = new Program();
+            /*
+             
+              - Using Anonymous method we can define a method within a method and can save its reference to a delegate.
+              - We only uses anonymous methods & lambda expressions only when our function is inline.
+             
+                                                 Anonymous Methods
+
+              - In C# 2.0 Anonymous methods were introduced make named functions syntax short.
+              - In Anonymous methods, we do not have to write the function names. We only write the method signature.
+                We not even need to write return types,access modifiers while assigning the method reference to a delegate 
+                because we use the name of our declared delegate due to which the compiler now already has an information 
+                that what value will be returned by this function because it see this return type information from the delegate 
+                declaration.
+              - Using Anonymous method we can define a method within a method and save its reference to a delegate.
+              - Reference: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/anonymous-functions
+                             
+                                                 Lambdas Expressions
+
+              - In C# 3.0 Lambda expressions were introduced make anonymous method syntax short.
+              - In Anonymous methods, we still had to write delegate keyword as well as the parameter's type even though it should not be
+                needed because when we declare a delegate it is already there so lambdas expressions removed that additional syntax too.
+              - Reference: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions
+
+            */
+
+            Ref Caller = delegate (int _first, int _second) // Anonymous Method
+            {
+                Console.WriteLine("Addition = {0}", _first + _second);
+                return _first + _second;
+            };
+
+            Caller += delegate (int _first, int _second)
+            {
+                Console.WriteLine("Multiplication = {0}", _first * _second);
+                return _first * _second;
+            };
+
+            Caller += (_first, _second) =>               // Lambda Expression
+            {
+                Console.WriteLine("Subtraction = {0}", _first - _second);
+                return _first - _second;
+            };
+
+            Caller += (_first, _second) =>
+            {
+                Console.WriteLine("Division = {0}", _first / _second);
+                return _first / _second;
+            };
+
+            Caller(100, 10); // calling multiple methods with a delegate.
+
+
+        }
+    }
+}

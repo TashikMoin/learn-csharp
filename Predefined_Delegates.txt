@@ -1,0 +1,82 @@
+using System;
+
+namespace Predefined_Delegates
+{
+    public delegate double Ref(int first, int second);
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            /*
+                                             
+                                            Predefined Delegates
+
+              - Func < ( n - 1 generic place holders for inputs ) , ( nth place holder for output ) > 
+                it is a predefined delegate that takes first (n-1) generic place holders as inputs and the last place holder as the returning type or the output value type of the function. it can't have any single place holding value.
+
+              - Action < (n generic place holders as inputs but there is no place holder reserved for output type ) >
+                it is another predefined delegate that only takes n number of input values but gives no output because it is treated 
+                as void method delegate.
+
+              - Predicate < ( n place holders for input parameters ) >
+                it is another predefined delegate that is similar to Action delegate but its return type is always bool because
+                it is used for conditional functions and on the basis of some conditions, those functions return a true or a false.
+
+
+
+            */
+
+            Func<int, int, int, int> Arithmetic_Using_Func;
+
+            Arithmetic_Using_Func = (_first, _second, _third) =>
+            {
+                Console.WriteLine("Addition Using Func Delegate = {0}", _first + _second + _third);
+                return _first + _second + _third;
+            };
+            Arithmetic_Using_Func += (_first, _second, _third) =>
+            {
+                Console.WriteLine("Subtraction Using Func Delegate = {0}", _first - _second - _third);
+                return _first - _second - _third;
+            };
+
+            Arithmetic_Using_Func(1000, 100, 10);
+            Console.WriteLine();
+
+
+
+            Action<int, int, int> Arithmetic_Using_Action;
+
+            Arithmetic_Using_Action = (_first, _second, _third) =>
+            {
+                Console.WriteLine("Addition Using Action Delegate = {0}", _first + _second + _third);
+            };
+            Arithmetic_Using_Action += (_first, _second, _third) =>
+            {
+                Console.WriteLine("Subtraction Using Action Delegate = {0}", _first - _second - _third);
+            };
+
+            Arithmetic_Using_Action(1000, 100, 10);
+            Console.WriteLine();
+
+
+            Predicate<int> If_Negative = (Number) =>
+            {
+                if (Number < 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            };
+
+            Console.WriteLine("Is -10 Negative : {0} ", If_Negative(-10));
+
+
+
+        }
+    }
+}
