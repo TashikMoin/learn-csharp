@@ -39,7 +39,7 @@ namespace Learning_CSharp
            3. If default non static default constructor exist too then it does not matter because static is called by the compiler
               and non static constructor is called by the user
            4. Static constructors are invoked only when the first instance(object) of a class is created OR if there exist a
-              main method inside a class then it is invoked before the executiong of the main method to initialize the static fields.
+              main method inside a static method's class then it is invoked before the executiong of the main method to initialize the static fields.
 
 
         */
