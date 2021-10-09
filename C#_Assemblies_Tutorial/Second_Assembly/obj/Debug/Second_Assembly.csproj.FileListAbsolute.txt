@@ -1,0 +1,9 @@
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\bin\Debug\Second_Assembly.dll
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\bin\Debug\Second_Assembly.pdb
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\bin\Debug\First_Assembly.dll
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\bin\Debug\First_Assembly.pdb
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\obj\Debug\Second_Assembly.csprojAssemblyReference.cache
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\obj\Debug\Second_Assembly.csproj.CoreCompileInputs.cache
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\obj\Debug\Second_Assembly.csproj.CopyComplete
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\obj\Debug\Second_Assembly.dll
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\Second_Assembly\obj\Debug\Second_Assembly.pdb

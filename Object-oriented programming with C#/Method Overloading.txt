@@ -40,7 +40,7 @@ namespace Learning_CSharp
     public class Program
     {
 
-        static void Main(string[] args)
+        static void Main(string[] args) // static main function will be invoked and prefered but if there exist multiple static main methods in a starting point class then the main method with string[] args signature will be prefered for starting point of the application.
         {
             Console.WriteLine("Main(string[] args)");
         }

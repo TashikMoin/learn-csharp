@@ -23,7 +23,7 @@ namespace Learning_CSharp
         }
     }
 
-    public class B:A
+    public class B:A  // we dont use public,private access modifiers during inheritance like we do in c++ because each attribute already has a access modifier before its declaration in c#.
     {
         public int a,b,c; // a,b of parent class will be hidden if acessing any Child class functions.But 
         public B()

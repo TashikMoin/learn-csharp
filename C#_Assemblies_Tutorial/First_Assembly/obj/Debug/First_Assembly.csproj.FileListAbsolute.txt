@@ -1,0 +1,6 @@
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\First_Assembly\bin\Debug\First_Assembly.dll
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\First_Assembly\bin\Debug\First_Assembly.pdb
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\First_Assembly\obj\Debug\First_Assembly.csprojAssemblyReference.cache
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\First_Assembly\obj\Debug\First_Assembly.csproj.CoreCompileInputs.cache
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\First_Assembly\obj\Debug\First_Assembly.dll
+C:\Tashik\My_Resources\C#\Assemblies_Tutorial\First_Assembly\obj\Debug\First_Assembly.pdb

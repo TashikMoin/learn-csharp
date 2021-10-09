@@ -2,7 +2,7 @@ using System;
 
 namespace Delegates
 {
-    public delegate double Ref(int first, int second);
+    
     /* 
      - A delegate is like a representator of a group.
      - Type safe, provide a late binding mechanism in .NET.
@@ -12,6 +12,9 @@ namespace Delegates
        methods are invoked in the order in which the references of functions were assigned to it.
      - Every delegate you work with is derived from MulticastDelegate
     */
+
+
+    public delegate double Ref(int first, int second);
 
     class Program
     {

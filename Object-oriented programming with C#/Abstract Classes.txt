@@ -1,5 +1,43 @@
 using System;
 
+
+/*
+
+
+
+- abstract classes are used to implement "some common business logic" of child/concrete classes to avoid redundant/duplicate code.
+
+- only the common business logic will be implemented inside the abstract class and non common functionality will act as abstract methods in aprent abstract base class.
+- if we define common functionality of child classes in a "non abstract parent class", then we can not stop the user from objects creation of the base class. The base class object/instance creation should not be allowed. Another problem is that we will have to define some "virtual methods" in that non abstract base/parent class, these virtual methods will act as "uncommon" functionality of the child classes that is why they are created as virtual methods so that each virtual method should be overriden by its child classes (cross calling) so that respective child class uncommon methods can be called from the instances.
+
+
+- abstract classes solves both the above mentioned problems and reduces code maintainability, make the classes decoupled.
+
+
+- abstract classes requires abstract keyword before class keyword during declaration.
+
+
+- abstract classes can have field attributes
+
+
+- abstract classes requires abstract keyword for abstract methods declaration but interfaces do not require abstract keyword for declaring abstract methods.
+  for e.g
+   public abstract void abc();
+
+
+- if a non abstract class inherits a abstract class then it is the duty of the child class to implement the abstract methods of the parent abstract class otherwise the child class will also become an abstract class and its instance cannot be created.
+- abstract classes does not support multiple inheritance of classes 
+but, "they support multiple inheritance of interfaces".
+
+- an abstract class "may" contain abstract methods/functions but not mandatory to have an abstract method/function.
+
+- Instances of abstract classes and interfaces are not allowed but we can make object reference variables of interfaces and those ref variables of interfaces can point to instances of the classes who implements that interface.
+
+- A sealed class cannot be used as a base class or parent class therefore an abstract class cannot be a sealed class because it has some abstract methods that should be implemented by the child classes but sealed classes have no child classes.
+
+
+*/
+
 namespace Test
 {
     abstract public class A
