@@ -1,0 +1,9 @@
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe.config
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.pdb
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\obj\Debug\WindowsService_Tutorial.csprojAssemblyReference.cache
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\obj\Debug\WindowsService_Tutorial.ProjectInstaller.resources
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\obj\Debug\WindowsService_Tutorial.csproj.GenerateResource.cache
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\obj\Debug\WindowsService_Tutorial.csproj.CoreCompileInputs.cache
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\obj\Debug\WindowsService_Tutorial.exe
+C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\obj\Debug\WindowsService_Tutorial.pdb

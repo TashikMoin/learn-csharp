@@ -1,0 +1,163 @@
+﻿Installing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing service Logging_Service...
+Creating EventLog source Logging_Service in log Application...
+Rolling back assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Restoring event log to previous state for source Logging_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing service Logging_Service...
+Creating EventLog source Logging_Service in log Application...
+Rolling back assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Restoring event log to previous state for source Logging_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing service Logging_Service...
+Creating EventLog source Logging_Service in log Application...
+Rolling back assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Restoring event log to previous state for source Logging_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing service Logging_Service...
+Service Logging_Service has been successfully installed.
+Creating EventLog source Logging_Service in log Application...
+Committing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+Removing EventLog source Logging_Service.
+Service Logging_Service is being removed from the system...
+Service Logging_Service was successfully removed from the system.
+Installing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing service Logging_Service...
+Service Logging_Service has been successfully installed.
+Creating EventLog source Logging_Service in log Application...
+Committing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+Removing EventLog source Logging_Service.
+Service Logging_Service is being removed from the system...
+Service Logging_Service was successfully removed from the system.
+Installing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing service Logging_Service...
+Service Logging_Service has been successfully installed.
+Creating EventLog source Logging_Service in log Application...
+Committing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+Removing EventLog source Logging_Service.
+Service Logging_Service is being removed from the system...
+Service Logging_Service was successfully removed from the system.
+Attempt to stop service Logging_Service.
+Installing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing service Logging_Service...
+Service Logging_Service has been successfully installed.
+Creating EventLog source Logging_Service in log Application...
+Committing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Installing service Logging_Service...
+Creating EventLog source Logging_Service in log Application...
+Rolling back assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+   logtoconsole = 
+Restoring event log to previous state for source Logging_Service.
+Uninstalling assembly 'C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.InstallLog
+   assemblypath = C:\Users\TashikMoin\Desktop\WindowsService_Tutorial\bin\Debug\WindowsService_Tutorial.exe
+Removing EventLog source Logging_Service.
+Service Logging_Service is being removed from the system...
+Service Logging_Service was successfully removed from the system.
+Attempt to stop service Logging_Service.
