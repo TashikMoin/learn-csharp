@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oH67evZkLBZQ56ynfDpu/BcVZSLaVlYKLXwHtJWRQ0Gmux8VVR1YEvnxKlhMd8yjl26fXLk6qBSyGwBwii9HwA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TashikMoin\\Desktop\\MVC_Core_WebApplication\\MVC_Core_WebApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TashikMoin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
