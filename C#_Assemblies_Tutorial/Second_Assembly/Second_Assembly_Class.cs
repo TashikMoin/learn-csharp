@@ -8,7 +8,7 @@ namespace Second_Assembly
         // Successfull Build 
 
         /* 
-         * Everything defined inside a namespace can only have 2 access modifiers (public or internal) write private,
+         * Everything defined inside a namespace can only have 2 access modifiers (public or internal) writing private,
          * protected and protected internal etc with the classes or other types inside a namespace will give an error.
          * However, for class member attribute and member functions, we can use all the c# access specifiers.
          * 
