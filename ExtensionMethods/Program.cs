@@ -41,6 +41,8 @@ namespace ExtensionMethods
      * 
      * Also, we can use the first binded parameter to have access of the existing value of the
      * caller object.
+     
+     * If your extension method has same name as existing method of a class then extension method will not be called. The priority will be given to the base method.
      * 
     */
     class X
