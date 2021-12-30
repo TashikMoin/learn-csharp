@@ -1,0 +1,84 @@
+Reflection
+	It is a technique through which we can get all the information(types, names, of properties, methods and constructors) of a type. Reflection is an ability to inspect an assembly's metadata at runtime.
+
+Uses
+
+1. When dragging/dropping a controller from the toolbox, we want to display all the information of its properties, and methods(events) in the solution explorer on right, this is done using reflection because reflection allows you to get information about properties,methods and constructors of a class.
+
+Example code,
+
+using System;
+using System.Reflection;
+
+namespace Tashik
+{
+	public class Reflection_Tutorial
+	{
+		Type T = Type.GetType("<fully qualified type name in string here"); or Type T = typeof(<type variable here>);
+
+		PropertyInfo[] properties = T.GetProperties(); // return an array having all the properties info of that class/struct/type
+		properties[0].name // gives name of the property at 0th index
+		properties[0].type // gives type of the property at 0th index
+
+		MethodInfo[] Methods = T.GetMethods(); // return an array having all the Methods info of that class/struct/type
+		Methods[0].name // gives name of the Method at 0th index
+		Methods[0].ReturnType.Name // gives name of the return type of the function.
+
+		ConstructorInfo[] Constructors = T.GetConstructors(); // return an array having all the Constructors info of that class/struct/type
+		Constructors[0].name // gives name of the Constructor at 0th index
+	}
+}
+
+
+
+
+
+
+2. Suppose if we have multiple implementations of an interface and we use a different implementation everytime we run our program. So in order to determine which provider class implementation to use at run time, we can use reflection and make instances of those provider classes that user wanted and can get information of that provider class at run time and can call its functions. This creation of an instance at runtime is called late binding and getting the information of a class at run time is called reflection.
+
+Example code,
+
+suppose we have an interface contract that has database cruds function and there are 2 provider classes mysql, and mongodb that implements it. Now, let say if we want to take decision at run time that which database we want to use, then we use reflection to make objects of providers at the runtime because the object cannot be created at compile time in such scenarios. This is called late binding (creation of objects at run time).
+
+
+namespace Tashik
+{
+
+	public class MongoDbProvider : <interface name>
+	{..}
+
+	public class MongoDbProvider : <interface name>
+	{..}
+
+	public class Reflection_Tutorial
+	{
+		Assembly CurrentAssemblyInfo = Assembly.GetExecutingAssembly();
+		// Gives information about current assembly
+
+		Type T = CurrentAssemblyInfo.GetType("<fully qualified type name in string here");
+		// this time we did not called Type.GetType("<type>") but we called CurrentAssemblyInfo.GetType("<type>");
+                   so that we can tell the framework that we are doign late binding here and do not through error at the
+                   compile time if the given type does not exist, find type at run time. If we would have used Type.GetType("<type>"),
+		   then if the type does not exist, then there would be a compile time error that "<type>" does not exist in current 
+		   context are you missing a directive...?
+
+		object MyInstanceAtRunTime = Activator.CreateInstance(T);
+		// creating instance of the type given by the user at runtime using the Activator class that helps in creating objects at runtime.
+		// Now the instance is created at run time of the type whose name we will get from app.config/user_input etc at run time.
+		
+
+		// Now to call methods from this newly created instance at runtime, first fetch the method information of the given type,
+		   MethodInfo Method = T.GetMethod("Method Name You want to call"); 
+                // it will return information of the method, its req parameter, return type etc so that we can provide that information to invoke it.
+
+		// We can create parameters by first checking what parameters, this function requires, functiosn return type 
+		   etc and genrate the parameters and pass to invoke method while callign the fucntion at runtime.
+
+		   Method.Invoke( <instance/obj> created at run time here, required parameters , , ..);
+
+		
+	}
+}
+
+
+

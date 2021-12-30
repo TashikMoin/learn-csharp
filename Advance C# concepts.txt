@@ -1,0 +1,261 @@
+ASP.Net WebServices uses XMLSerializer for conversion into XML 
+WCF uses DataContractSerializers for conversion into XML
+
+
+
+
+
+
+
+
+DataAdapter object is used to fill a DataSet/DataTable with query results in ADO.net
+
+
+
+- ADO.net data read example code
+    using(SqlConnection conn = new SqlConnection("Data Source=abc;Integrated Security=true;Initial Catalog=Test")) {
+        con.Open();
+        SqlCommand cmd = new SqlCommand("Select UserName, First Name,LastName,Location FROM Users", conn);
+        SqlDataReader sdr = cmd.ExecuteReader();
+        gvUserInfo.DataSource = sdr;
+        gvUserInfo.DataBind();
+        conn.Close();
+    }
+
+
+
+
+
+
+
+- ADO.net data read example code
+protected void BindGridview() {
+    SqlConnection conn = new SqlConnection("Data Source=abc;Integrated Security=true;Initial Catalog=Test");
+    conn.Open();
+    SqlCommand cmd = new SqlCommand("Select UserName, First Name,LastName,Location FROM Users", conn);
+    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+    DataSet ds = new DataSet();
+    sda.Fill(ds);
+    gvUserInfo.DataSource = ds;
+    gvUserInfo.DataBind();
+}
+
+
+
+
+
+
+ADO.NET is the data access component for the . NET Framework. ADO.NET leverages the power of XML to provide disconnected access to data. ADO.NET is made of a set of classes that are used for connecting to a database, providing access to relational data, XML, and application data, and retrieving results.
+
+
+
+
+
+- Pillars of WCF
+SOA
+interoperability and integration
+unification
+
+
+
+- Endpoint in WCF
+Endpoints provide clients access to the functionality offered by a WCF service. Each endpoint consists of four properties: An address that indicates where the endpoint can be found. A binding that specifies how a client can communicate with the endpoint. A contract that identifies the operations available.
+
+
+
+
+
+“Threads that need writer locks while they hold reader locks will result in
+deadlocks.”
+
+
+thread#1 fun
+rwlock.AcquireReaderLock(X)
+{
+	rwlock.AcquireWriterLock(X)  //deadlock  --> add this line to avoid this deadlock -> rwlock.UpgradetoWriterLock(Timeout.Infinite) "either this"
+	{
+	
+	}
+}
+
+
+thread#2 fun
+rwlock.AcquireWriterLock(X)
+{
+	rwlock.AcquireReaderLock(X)  // deadlock --> add this line to avoid this deadlock -> rwlock.DowngradeFromWriterLock(Timeout.Infinite) "or this"
+	{
+	
+	}
+}
+
+
+
+
+
+
+- Deadlock prevention methods
+1 Mutual Exclusion. 
+2 Hold and Wait. 
+3 No Preemption. 
+4 Circular Wait.
+
+
+
+
+
+- Making ArrayList thread Safe
+Collections.synchronizedList(new ArrayList<YourClassNameHere>())
+
+
+
+
+
+- Difference b/w virtual and abstract methods
+Virtual methods have an implementation and provide the derived classes with the option of overriding it. Abstract methods do not provide an implementation and force the derived classes to override the method. So, abstract methods have no actual code in them, and subclasses HAVE TO override the method.
+
+
+
+
+The SOAP mustUnderstand global attribute can be used to indicate whether a header entry is mandatory or optional for the recipient to process. The recipient of a header entry is defined by the SOAP actor attribute (see section 4.2. 2). The value of the mustUnderstand attribute is either "1" or "0".
+
+
+
+
+A thin client is software that is primarily designed to communicate with a server. Its features are produced by servers such as a cloud platform. A thick client is software that implements its own features. It may connect to servers but it remains mostly functional when disconnected.
+
+
+
+
+
+
+
+Service-oriented architecture (SOA)
+(Service Provider) --publish--> (Server Registry) --find--> (Service consumer) --bind/invoke--> (Service Provider)
+
+
+
+
+
+
+Difference between layered and tiered architecture
+Specifically, tiers are places where layers are deployed and where layers run. In other words, tiers are the physical deployment of layers. How to implement 3 layer applications: If you take an example of web application, we implement Business layer and Data access layer as class library projects.
+
+
+
+
+
+
+
+
+- Diff b/w webhooks and apis
+1. Webhooks offer lightweight data sharing.
+2. APIs requires constant polling whereas webhooks does not.
+3. Webhooks are unidirectional (no request is made by the client, data is sent in one direction directly without any request)
+4. In webhooks, data is sent in real time to the client based on some events.
+5. They are easier to set up and less resource-intensive than APIs.
+6. Unlike APIs, webhooks do not allow the sending system to add, update and delete data on the receiving end, which is why webhooks alone are too limited to offer full integration between two applications.
+  Examples,
+	Automatically updating accounting software when invoices are paid, or setting up any type of notifications.
+
+
+
+
+
+
+
+
+- The SOAP <Fault> element
+  It carries error and status information in the SOAP message. If an error occurs in a web service, a fault message is returned to the client. The basic structure of the fault message is defined in the SOAP specifications.
+
+
+
+
+
+- proxy applications
+1. lazy loading
+2. secure objects (different level of code has different privileges)
+3. distributed objects (proxy broker architecture)
+4. collections
+5. Reference counting
+
+
+
+
+
+
+- Lock keyword Vs Monitor class Vs Mutex keyword
+lock is a compiler keyword, not an actual class or object. It's a wrapper around the functionality of the Monitor class and is designed to make the Monitor easier to work with for the common case.
+
+The Monitor (and the lock keyword) are, as Darin said, restricted to the AppDomain. Primarily because a reference to a memory address (in the form of an instantiated object) is required to manage the "lock" and maintain the identity of the Monitor
+
+The Mutex, on the other hand, is a .Net wrapper around an operating system construct, and can be used for system-wide synchronization, using string data (instead of a pointer to data) as its identifier. Two mutexes that reference two strings in two completely different memory addresses, but having the same data, will actually utilize the same operating-system mutex.
+
+A Mutex can be either local to a process or system-wide. 
+Mutex is used between multiple processes and lock is used within the same process or application.
+
+lock - that is really a shortcut to the Monitor class, on the other hand tries to avoid allocating kernel resources and transitioning to kernel code (and is thus leaner & faster - if one has to find a WinAPI construct that it resembles, it would be CriticalSection).
+
+The other difference is what others point out: a named Mutex can be used across processes.
+
+Unless one has special needs or requires synchronization across processes, it is just better to stick to lock (aka Monitor)˛
+
+
+
+
+
+- Interrupt in threads
+An interrupt is an indication to a thread that it should stop what it is doing and do something else. It's up to the programmer to decide exactly how a thread responds to an interrupt, but it is very common for the thread to terminate.
+interrupt() does not interrupt the thread, it continues to run.
+
+interrupt resumes from wait/sleep/join (if wait/sleep/join are called inside thread functions, we can call interrupt in main and other function to resume that thread by calling interrupt function)
+
+
+
+
+
+
+A thread can prevent itself from being terminated with Thread.ResetAbort.
+- try{
+	…
+  }
+  catch(ThreadAbortException){
+	Thread.ResetAbort();  
+        // This helps in execution of statements after catch and do not let thread to terminate due to any reason if an exception is generated.
+  }
+
+
+
+
+
+
+- Difference between wait() and sleep() in threading.
+The major difference is that wait() releases the lock or monitor while sleep() doesn't releases the lock or monitor while waiting. wait() is used for inter-thread communication while sleep() is used to introduce pause on execution, generally
+
+- The purpose of Wait and Pulse is to provide a simple signaling mechanism: Wait blocks until it receives notification from another thread; Pulse provides that notification. The monitor class have two static method Wait() and Pulse().
+
+
+- A call to PulseAll signals the release of the lock to all waiting threads. The first form waits until notified. The second form waits until notified or until the specified period of milliseconds has expired. For both waitObject specifies the object upon which to wait.
+
+
+
+
+
+
+
+
+
+
+- Thread States
+Unstarted state: When an instance of a Thread class is created, it is in the unstarted state, means the thread has not yet started to run when the thread is in this state. Or in other words Start() method is not called.
+ 
+Thread thr = new Thread(); 
+Here, thr is at unstarted state.
+Runnable State: A thread that is ready to run is moved to runnable state. In this state, a thread might actually be running or it might be ready to run at any instant of time. It is the responsibility of the thread scheduler to give the thread, time to run. Or in other words, the Start() method is called. 
+ 
+Running State: A thread that is running. Or in other words, the thread gets the processor.
+Not Runnable State: A thread that is not executable because
+Sleep() method is called.
+Wait() method is called.
+Due to I/O request.
+Suspend() method is called.
+Dead State: When the thread completes its task, then thread enters into dead, terminates, abort state.

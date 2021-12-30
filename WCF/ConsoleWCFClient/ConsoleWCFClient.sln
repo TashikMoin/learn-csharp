@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleWCFClient", "ConsoleWCFClient.csproj", "{2FF43377-040F-4634-BBD1-75F544504683}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FF43377-040F-4634-BBD1-75F544504683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF43377-040F-4634-BBD1-75F544504683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF43377-040F-4634-BBD1-75F544504683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF43377-040F-4634-BBD1-75F544504683}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BDAF597-D7B7-4A95-AF7B-D49ECF544A40}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+C:\Users\TashikMoin\Desktop\WCFService\bin\Debug\WCFService.dll.config
+C:\Users\TashikMoin\Desktop\WCFService\bin\Debug\WCFService.dll
+C:\Users\TashikMoin\Desktop\WCFService\bin\Debug\WCFService.pdb
+C:\Users\TashikMoin\Desktop\WCFService\obj\Debug\WCFService.csproj.AssemblyReference.cache
+C:\Users\TashikMoin\Desktop\WCFService\obj\Debug\WCFService.csproj.CoreCompileInputs.cache
+C:\Users\TashikMoin\Desktop\WCFService\obj\Debug\WCFService.dll
+C:\Users\TashikMoin\Desktop\WCFService\obj\Debug\WCFService.pdb

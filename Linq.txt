@@ -1,0 +1,200 @@
+LINQ ( Language Integrated Query )
+
+Why Linq?
+- Suppose ager ek program likhna ha jo ek array mein first negative nos ko remove kere and sort kere in descending
+order. so to remove -ve nos pehle total -ve nos count kerne hounge phir current size - total negative jitne size ki
+ek new array bnani peregi phir copy kerwanay k liye alag se ek looping kerni hogi phir sort kerne k liye ek loop
+phir reverse kerne k liye ek loop so istrh ka task perform kerne k liye bht ziada code likhna perega but ager yehi 
+kaam kisi SQL ki query me kerna ho to wo 1 line me hoskta ha.. but sql interact kerta ha with relational database
+tables not with the arrays and other objects.. that is why we use linq that allows us to write queries
+on C# objects like arrays,collections etc. SQL queries can only be written on db tables but with linq we can write 
+our queries on sql db tables + C# objects like arrays,collections,lists, relation db tbales etc and queries likh skte 
+hain in C# code with intellisense.
+
+Same task can be performed with the following linq query,
+var PosArr = from i in Arr where i >= 0 orderby i descending select i ;
+( ye query jo bhi type return keregi for e.g Array in this case to var ki wjh se var us type ka bnjayega on runtime
+the developer do not have to think of the type )
+
+SQL queries syntax,
+Select <Column Name or * for all> From <Table Name> As <Alias> <Clauses like where,orderby,descending,ascending,having etc>
+
+Linq queries syntax,
+From <Alias/SingleRecordName> in <Collection Or Array Or List Or Other Object> <All Clauses before select keyword(Optional) > Select <Alias>
+For e.g,
+var x = from i in Array/DB_table/collections/etc select i ; 
+// select i means select all columns of that record/row. Its like * of SQL.
+
+we can also specify columns like sql during the selection in Linq with new keyword.
+// for i in Array/DB_table/collections/etc select new { i.name, i.department }
+
+we can also provide alias for selected columns inside new keyword object braces with using assignment operator "="
+for e.g,
+for i in Array/DB_table/collections/etc select new { Name = i.name, Department = i.department }
+
+Note: all the clauses that linq supports must come before select keyword
+
+Example query for group by,
+from i in <db_context_obj>.EmployeesTable group i by i.department_name into G select new { TotalEmployees = G.Count() }
+In linq, group and by are two separate keywords and the into keyword is like = operator that helps in assigning each group data into an alias/variable after the grouping so that we can use that alias/variable for groupby aggregate functions to perform operations on each formed group. Using aggregate functions is a must when grouping data in queries in sql.
+
+var x = from i in Array/DB_table/collections/etc where i=="Employee" select i ;
+
+LINQ does not supports "HAVING" Clause
+In SQL, the use cases of where and having clause is,
+before grouping -> we use where clause 
+after grouping -> we use having clause 
+
+To write having clause like queries in linq, we can use where clause for both before grouping and also after grouping but in sql, using where clause after grouping is not allowed but in linq it is allowed.
+
+example of having clause query in linq,
+
+for i in <db_context_obj>.EmployeesTable group i by i.department_name into G where G.count() > 5 select new { TotalEmployees = G.count() }
+// in this linq query, the where clause is used after the grouping and only those departments will be selected where the records/row count is > 5 and the columns that we wanted to display are filters inside select new { }
+
+
+using linq to sql we dont even have to write queries to perform cruds, we use orm functions to do crud operations.
+
+Types Of Linq Queries
+- Linq to objects like Arrays Collections lsits etc
+- Linq to databases : tables,relational db only sql
+    a) linq to ado.net
+    b) linq to sql
+    c) linq to entities
+- Linq to XML : XML files
+
+Advantages of linq
+1. Compile time syntax checking
+2. Type Safe
+3. Intellisense support
+4. debugging support
+
+Comparison with ADO.NET
+1. In ADO.NET there is only Runtime Syntax checking not compile time.
+2. ADO.NET was not type safe
+3. No Intellisense support
+4. Debugging was not possible
+5. Code is a combination of Object oriented and db objects but in linq,
+   db_tables --> classes
+   columns --> properties
+   rows --> instances (on run time, we cannot see in code)
+   stored procedures --> class methods
+
+
+To work with linq to SQL we first need to convert our database obejct into object oriented types or object oriented obejcts.
+Using ORM designer we can convert our db objects into object oriented objects/types.This process of converting your db objects
+to object oriented types is called ORM ( Object relational Mapping )
+Examples of ORM conversion,
+Database Objects             Object Oriented Objects or Types
+Columns             ->             Properties
+Rows or Records     ->           Instances/Objects
+Stored Procedures   ->              Methods
+
+ORM can be implemented using any OR-Designer
+
+How to Implement ORM with Linq?
+
+- Go to visual studio > view > server explorer > create a new database, provide it your sql server name for e.g DESKTOP-1VCI6PK or localhost or sa etc
+- create a database table inside this newly created database from the server explorer.
+- give names to table columns and give types to the table column and click update database button on top left.
+
+- Add a LinqToSQLClasses class in your project, the name recommended by professionals for this class should be your database
+name it will then add a reference to system.data.linq inside our project. It also adds two files,
+<LinqToSQLClassName>.dbml 
+          The DBML Extractor is a LINQ to SQL component that takes database metadata as input and produces a DBML 
+file as output. it has two input panels. On the left we drag and drop our database tables and on the right side panel,
+we drag and drop our stored procedures of db. when the drag and drop is done, it automatically generates some classes like
+datacontext class (which helps in communication with database), it also generates classes for every table in the database if
+a table is drag and dropped into the left side panel automatically .net will write code to generate a class corresponding to 
+that database table. this our <dbname>datacontext class is inherited from datacontext class that helps us to connect us
+with our database.
+
+When we drop first db table from the server explorer to the left side panel of the dbml file, Two things happends
+ 1. automatically the connection string of that table's database is added to the app.config file. 
+ 2. A new parameterless constructor is added in dbml.designer.cs file by the framework. This constructor is created parameterless
+    so that we can make object of this dbcontext class. previously we could not because of aprameterized constructors but now after
+    dropping the first table, the framework knows that which database to communicate so it creates a parameterless constructor now
+    if we make an object of this dbcontext class, we can communicate with tables of that database.
+
+
+
+
+
+
+Insert operation
+- create connection by creating an object of dbcontext class
+- create object of the mapped class that was generated by .net when some X table was drag and drop into the left side panel. This object is 
+a record that we want to insert so intialize it with some values.
+- <db context object>.<table name in which u want to perform insertion>.InsertOnSubmit(<object of corresponding mapped class of that db table>);
+  // The InsertOnSubmit does not commit or saves the changes to the database so in order to save the changes after a record is entered to a 
+     table using this function, we now call SubmitChanges() function. e.g <db context object>.SubmitChanges(); // this will save chagnes to the db permanently.
+
+Update Operation
+- get/bring "reference" of the existing object/instance/record/row from the table whose record is to be modified using firstordefault, singleordefault etc orm fucntions
+  for e.g 
+    Employee obj = <data_context_class_obj>.<table name>.SingleOrDefault( e => e.id == "<some id to fetch a specific record>" )
+    // now modify this fetched record and since it was a reference, it will not be inserted again it will be changed directly if we modify even a single attribute of it.
+    obj.nmae = <updated value>
+    obj.<smth> = <new updated value>
+    ...
+    // after update now call SubmitSettings method using the instance of <data context class>
+    <data_context_class_obj>.SubmitSettings();
+
+
+Delete operation
+// same as update, first fetch the existing record reference and then call <data_context_class_obj>.<table name>.DeleteOnSubmit(<obj>); and then call 
+submit settings function.
+
+
+
+
+To add a stored procedure go to visual studio > view > server explorer > under your database > stored procedure > create new stored procedure.
+Note: we can make parameter and parameterless stored procedure both.
+for e.g,
+
+CREATE PROCEDURE <PROCEDURE_NAME>(@Name Varchar(100) = Null )   // = Null is a default value in case a parameter is not passed.
+As
+Begin
+ If @Name Is Null 
+   Select x,Y,X .... <your sql query here that can fetch n coloumns from multiple tables with join or anything you want you can write here..>
+ Else
+   Select x,Y,X .... <your sql query here that can fetch n coloumns from multiple tables with join or anything you want you can write here..>
+
+when we drag and drop a stored procedure, no method will be created in a auto generated corresponding C# model class of the table but a new separate class will be generated because in stored procedure it is not necessary that we select only the columns that is inside our model class or inside our table from which we are fetching we can fetch n columns from n table using things like joins. Therefore, a separate class is defined for each stored procedure.
+
+
+To call a stored procedure
+<data_context_class_obj>.<stored procedure name>; // a stored procedure returns an object of ISingleResult class so create an obejct of this class to get data in your C# code from the result of the stored procedure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

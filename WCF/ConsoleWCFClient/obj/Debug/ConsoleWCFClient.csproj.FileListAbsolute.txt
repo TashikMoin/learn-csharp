@@ -1,0 +1,7 @@
+C:\Users\TashikMoin\Desktop\ConsoleWCFClient\bin\Debug\ConsoleWCFClient.exe.config
+C:\Users\TashikMoin\Desktop\ConsoleWCFClient\bin\Debug\ConsoleWCFClient.exe
+C:\Users\TashikMoin\Desktop\ConsoleWCFClient\bin\Debug\ConsoleWCFClient.pdb
+C:\Users\TashikMoin\Desktop\ConsoleWCFClient\obj\Debug\ConsoleWCFClient.csproj.AssemblyReference.cache
+C:\Users\TashikMoin\Desktop\ConsoleWCFClient\obj\Debug\ConsoleWCFClient.csproj.CoreCompileInputs.cache
+C:\Users\TashikMoin\Desktop\ConsoleWCFClient\obj\Debug\ConsoleWCFClient.exe
+C:\Users\TashikMoin\Desktop\ConsoleWCFClient\obj\Debug\ConsoleWCFClient.pdb
